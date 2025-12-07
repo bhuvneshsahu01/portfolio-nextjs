@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider, Navbar, Footer } from '@/components/layout';
+import { DevelopmentBanner } from '@/components/layout/DevelopmentBanner';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -81,6 +82,7 @@ export default function RootLayout({
         className={`${inter.variable} ${spaceGrotesk.variable} antialiased min-h-screen flex flex-col`}
       >
         <ThemeProvider>
+          <DevelopmentBanner />
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />

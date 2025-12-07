@@ -10,7 +10,7 @@ export function Hero() {
     return (
         <section
             id="home"
-            style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '120px', paddingBottom: '80px' }}
+            style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '166px', paddingBottom: '80px' }}
         >
             {/* Background Effects */}
             <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}>
