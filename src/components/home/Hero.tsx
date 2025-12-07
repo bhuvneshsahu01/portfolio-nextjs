@@ -59,12 +59,31 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
-                            style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 600, color: 'var(--foreground)', marginBottom: '20px' }}
+                            style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 600, color: 'var(--foreground)', marginBottom: '8px' }}
                         >
-                            {personalInfo.subtitle}
+                            Machine Learning Engineer, Production GenAI & Computer Vision
                         </motion.p>
 
-                        {/* Metrics Banner */}
+                        {/* Subtitle */}
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.25 }}
+                            style={{ fontSize: 'clamp(0.95rem, 1.8vw, 1.25rem)', color: 'var(--accent-primary)', marginBottom: '20px', fontWeight: 500 }}
+                        >
+                            Shipping production AI systems that reduce costs and automate workflows — expert in LLM orchestration, RAG, and industrial computer vision.
+                        </motion.p>
+
+                        {/* Tagline */}
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                            style={{ fontSize: '1rem', color: 'var(--foreground-secondary)', maxWidth: '800px', margin: '0 auto 24px', lineHeight: 1.7 }}
+                        >
+                            I design, build, and deploy end-to-end ML systems (LLM agents, RAG pipelines, CV) that deliver measurable business outcomes — e.g., 40% support-ticket reduction and 95%+ mAP in production deployments.
+                        </motion.p>
+
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}

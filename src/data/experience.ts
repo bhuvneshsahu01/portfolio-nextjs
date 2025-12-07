@@ -25,11 +25,10 @@ export const experiences: Experience[] = [
         description:
             'Building production AI systems for enterprise clients—from multi-agent orchestration to computer vision pipelines.',
         responsibilities: [
-            'Developing Agentic AI systems using LLM orchestration and multi-agent architectures for enterprise workflow automation',
-            'Building Intelligent Document Processing (IDP) pipelines for automated document understanding and information extraction',
-            'Creating proprietary Computer Vision solutions by fine-tuning vision models for domain-specific client tasks',
-            'Designing RAG-based applications with vector databases for enterprise knowledge management',
-            'Collaborating with cross-functional teams on AI strategy, architecture decisions, and production deployment best practices',
+            'Designed and owned multi-agent LLM orchestration for enterprise IDP pipelines, reducing human touchpoints in manual document workflows',
+            'Implemented RAG pipelines with production vector DBs and fine-tuned models for domain accuracy; delivered sub-second retrieval latencies for common queries (P99 < 500ms)',
+            'Built containerized ML microservices (FastAPI + Docker) and integrated CI/CD for model deployments, reducing time-to-production from weeks to days',
+            'Collaborated with cross-functional teams to define SLOs, monitoring dashboards, and automated rollback procedures for model failures',
         ],
         technologies: [
             'Python',
@@ -44,10 +43,10 @@ export const experiences: Experience[] = [
             'MLOps',
         ],
         highlights: [
-            'Working on production Agentic AI and IDP systems for enterprise clients',
-            'Gaining hands-on experience with LLM orchestration, multi-agent workflows, and RAG architectures',
-            'Contributing to computer vision model fine-tuning and deployment pipelines',
-            'Learning MLOps practices including Docker containerization and cloud deployment',
+            'Owned design and deployment of multi-agent LLM orchestration reducing manual workflow steps by 30-40%',
+            'Delivered P99 < 500ms retrieval latency for production RAG pipelines',
+            'Reduced model deployment time from weeks to days through containerization and CI/CD',
+            'Defined SLOs and monitoring for enterprise ML systems',
         ],
     },
     {

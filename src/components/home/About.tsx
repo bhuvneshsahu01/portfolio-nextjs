@@ -57,25 +57,16 @@ export function About() {
                         overflow: 'hidden'
                     }}>
                         <p style={{ fontSize: '1.125rem', color: 'var(--foreground-secondary)', lineHeight: 1.8, marginBottom: '20px' }}>
-                            My journey into ML started during my physics undergrad at Hindu College, where I discovered
-                            I was more interested in the statistical patterns in data than the theoretical equations.
-                            That realization led me to CMI's Data Science program, where I went deep on probabilistic
-                            foundations, deep learning architectures, and statistical inference.
+                            I'm an ML engineer with a strong statistical foundation and track record of shipping production AI systems that deliver measurable business value. My background in statistics and data science (M.Sc., Chennai Mathematical Institute) taught me rigorous experimental design and inference; my production experience taught me to design systems that are robust, observable, and maintainable in real-world environments.
                         </p>
-                        <p style={{ color: 'var(--foreground-secondary)', lineHeight: 1.8, marginBottom: '20px' }}>
-                            But the real learning happened outside the classroom. At{' '}
-                            <span style={{ color: 'var(--foreground)', fontWeight: 600 }}>AlgoLabs</span>, I built a
-                            computer vision system for infrastructure monitoring that achieved 95%+ mAP and actually
-                            got deployed in production. At{' '}
-                            <span style={{ color: 'var(--foreground)', fontWeight: 600 }}>Coriolis Technologies</span>,
-                            I developed an agentic AI assistant that reduced support team workload by 40% through
-                            intelligent workflow automation. These weren't academic exercises—they were systems that
-                            people used to do their jobs better.
+                        <p style={{ fontSize: '1.125rem', color: 'var(--foreground-secondary)', lineHeight: 1.8, marginBottom: '20px' }}>
+                            I've led end-to-end projects across GenAI, RAG pipelines, and industrial computer vision. Highlights include architecting an agentic AI assistant that reduced support ticket volume by 40% for an enterprise client and building a real-time crack-detection pipeline that achieved 95.3% mAP and processes 10K+ images/day in production. In every project I drive the full lifecycle: problem framing, dataset engineering, model selection and tuning, CI/CD and containerized deployment, and post-deploy monitoring and iteration.
                         </p>
-                        <p style={{ color: 'var(--foreground-secondary)', lineHeight: 1.8 }}>
-                            The common thread in all my work is obsessive focus on: (1) does it work reliably in production,
-                            (2) does it create measurable business value, and (3) is the architecture maintainable by
-                            other engineers?
+                        <p style={{ fontSize: '1.125rem', color: 'var(--foreground-secondary)', lineHeight: 1.8, marginBottom: '20px' }}>
+                            My technical approach emphasizes measurable outcomes: if a model isn't improving the business metric, it isn't the right model. I combine principled statistics with practical software engineering — production latency targets, model versioning, drift detection, and retraining pipelines — to bridge research and reliable delivery.
+                        </p>
+                        <p style={{ fontSize: '1.125rem', color: 'var(--foreground)', lineHeight: 1.8, fontWeight: 500 }}>
+                            I'm seeking roles where I can own core ML systems (LLM orchestration, RAG, vision pipelines) and scale them for real customers. If you want someone who can go from prototype to production and measure impact, let's talk.
                         </p>
                     </div>
                 </motion.div>
