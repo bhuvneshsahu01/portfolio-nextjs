@@ -1,26 +1,343 @@
 @import "tailwindcss";
 
+/* ===================================
+   CSS VARIABLES & DESIGN TOKENS
+   =================================== */
+
+/* Light Theme (Default) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Backgrounds */
+  --background: #fafbfc;
+  --background-secondary: #f0f2f5;
+  --background-tertiary: #e4e7eb;
+  --background-card: #ffffff;
+
+  /* Text Colors */
+  --foreground: #0f172a;
+  --foreground-secondary: #475569;
+  --foreground-muted: #64748b;
+
+  /* Accent Colors */
+  --accent-primary: #6366f1;
+  --accent-secondary: #8b5cf6;
+  --accent-tertiary: #ec4899;
+
+  /* Borders & Shadows */
+  --border-color: rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
+
+  /* Navbar */
+  --navbar-bg: rgba(250, 251, 252, 0.9);
+  --navbar-bg-scrolled: rgba(255, 255, 255, 0.98);
+}
+
+/* Dark Theme */
+.dark {
+  /* Backgrounds */
+  --background: #0a0a0f;
+  --background-secondary: #111118;
+  --background-tertiary: #1a1a24;
+  --background-card: #16161d;
+
+  /* Text Colors */
+  --foreground: #f8fafc;
+  --foreground-secondary: #94a3b8;
+  --foreground-muted: #64748b;
+
+  /* Borders & Shadows */
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.5);
+
+  /* Navbar */
+  --navbar-bg: rgba(10, 10, 15, 0.9);
+  --navbar-bg-scrolled: rgba(10, 10, 15, 0.98);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-tertiary: var(--background-tertiary);
+  --color-background-card: var(--background-card);
+
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-muted: var(--foreground-muted);
+
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-tertiary: var(--accent-tertiary);
+
+  --color-border: var(--border-color);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Space Grotesk', 'Inter', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ===================================
+   BASE STYLES
+   =================================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Dark mode gradient background */
+.dark body,
+.dark {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(139, 92, 246, 0.1), transparent),
+    radial-gradient(ellipse 60% 40% at 0% 100%, rgba(99, 102, 241, 0.08), transparent),
+    var(--background);
+}
+
+/* ===================================
+   TYPOGRAPHY - PREVENT OVERFLOW
+   =================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+p {
+  line-height: 1.8;
+  color: var(--foreground-secondary);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::selection {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+/* ===================================
+   SECTION SPACING - PROPER GAPS
+   =================================== */
+section {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+  margin-bottom: 0;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-top: 120px !important;
+    padding-bottom: 120px !important;
+  }
+}
+
+/* ===================================
+   CONTENT WRAPPER - CENTERED CONTAINER
+   =================================== */
+.content-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 640px) {
+  .content-wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-wrapper {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+/* ===================================
+   GLASS CARD - NO TEXT OVERFLOW
+   =================================== */
+.glass {
+  background-color: var(--background-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.glass:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--accent-primary);
+}
+
+/* ===================================
+   CARD STYLES - CONTAINED TEXT
+   =================================== */
+.card,
+[class*="bg-background-card"] {
+  overflow: hidden !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Force all card-like elements to contain their text */
+.glass p,
+.glass h1,
+.glass h2,
+.glass h3,
+.glass h4,
+.glass span,
+[class*="rounded-2xl"] p,
+[class*="rounded-xl"] p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+/* ===================================
+   GRADIENT TEXT
+   =================================== */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 50%, var(--accent-tertiary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===================================
+   ANIMATIONS
+   =================================== */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Animation delays */
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+/* ===================================
+   SCROLLBAR
+   =================================== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: 5px;
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  section {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .content-wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
