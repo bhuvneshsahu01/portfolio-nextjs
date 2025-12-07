@@ -31,14 +31,14 @@ export function About() {
                         About Me
                     </span>
                     <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, marginBottom: '16px' }}>
-                        Passionate About <span className="gradient-text">Solving Problems</span>
+                        From Physics to <span className="gradient-text">Production AI</span>
                     </h2>
                     <p style={{ fontSize: '1.125rem', color: 'var(--foreground-secondary)', maxWidth: '700px', margin: '0 auto', lineHeight: 1.7 }}>
-                        Transforming data into actionable insights and building AI systems that make a real impact
+                        Building AI systems that actually work in production—not science experiments in Jupyter notebooks
                     </p>
                 </motion.div>
 
-                {/* Bio Card */}
+                {/* Bio Card - Updated with storytelling */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -57,14 +57,25 @@ export function About() {
                         overflow: 'hidden'
                     }}>
                         <p style={{ fontSize: '1.125rem', color: 'var(--foreground-secondary)', lineHeight: 1.8, marginBottom: '20px' }}>
-                            {personalInfo.bio.short}
+                            My journey into ML started during my physics undergrad at Hindu College, where I discovered
+                            I was more interested in the statistical patterns in data than the theoretical equations.
+                            That realization led me to CMI's Data Science program, where I went deep on probabilistic
+                            foundations, deep learning architectures, and statistical inference.
+                        </p>
+                        <p style={{ color: 'var(--foreground-secondary)', lineHeight: 1.8, marginBottom: '20px' }}>
+                            But the real learning happened outside the classroom. At{' '}
+                            <span style={{ color: 'var(--foreground)', fontWeight: 600 }}>AlgoLabs</span>, I built a
+                            computer vision system for infrastructure monitoring that achieved 95%+ mAP and actually
+                            got deployed in production. At{' '}
+                            <span style={{ color: 'var(--foreground)', fontWeight: 600 }}>Coriolis Technologies</span>,
+                            I developed an agentic AI assistant that reduced support team workload by 40% through
+                            intelligent workflow automation. These weren't academic exercises—they were systems that
+                            people used to do their jobs better.
                         </p>
                         <p style={{ color: 'var(--foreground-secondary)', lineHeight: 1.8 }}>
-                            My professional journey includes building system-agnostic AI assistants at{' '}
-                            <span style={{ color: 'var(--foreground)', fontWeight: 600 }}>Coriolis Technologies</span> and
-                            developing industrial-grade crack detection systems at{' '}
-                            <span style={{ color: 'var(--foreground)', fontWeight: 600 }}>AlgoLabs</span>.
-                            I focus on creating solutions that translate messy business problems into structured analytical pipelines.
+                            The common thread in all my work is obsessive focus on: (1) does it work reliably in production,
+                            (2) does it create measurable business value, and (3) is the architecture maintainable by
+                            other engineers?
                         </p>
                     </div>
                 </motion.div>
@@ -78,8 +89,8 @@ export function About() {
                     margin: '0 auto'
                 }}>
                     <StatCard value={stats.experience} label="Professional Experience" icon={<Briefcase style={{ width: '24px', height: '24px' }} />} delay={0.2} />
-                    <StatCard value={stats.projectsCompleted} label="Major Projects" icon={<Code style={{ width: '24px', height: '24px' }} />} delay={0.3} />
-                    <StatCard value={stats.cgpa} label="CGPA (M.Sc.)" icon={<GraduationCap style={{ width: '24px', height: '24px' }} />} delay={0.4} />
+                    <StatCard value={stats.projectsCompleted} label="Production Systems" icon={<Code style={{ width: '24px', height: '24px' }} />} delay={0.3} />
+                    <StatCard value={stats.cgpa} label="CGPA (M.Sc. CMI)" icon={<GraduationCap style={{ width: '24px', height: '24px' }} />} delay={0.4} />
                     <StatCard value={stats.awards} label="DST Scholarship" icon={<Award style={{ width: '24px', height: '24px' }} />} delay={0.5} />
                 </div>
             </div>

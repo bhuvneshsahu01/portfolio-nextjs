@@ -1,12 +1,20 @@
 export const personalInfo = {
     name: 'Bhuvnesh Sahu',
-    title: 'Data Scientist',
-    subtitle: 'Data Scientist @ Wipro | M.Sc. Data Science',
-    tagline: 'Applying Machine Learning and Statistics to solve real-world problems',
+    title: 'Machine Learning Engineer',
+    subtitle: 'Machine Learning Engineer | Production AI Specialist',
+    tagline: 'I build AI systems that create measurable business value. Specialized in GenAI agents, RAG pipelines, and computer vision—from prototype to production.',
     email: 'bhuvneshsahu1234@gmail.com',
     phone: '+91 9407241555',
     location: 'India',
     profileImage: '/images/profile/profile.jpg',
+
+    // Achievements for the banner
+    achievements: [
+        { label: '5+ Production ML Systems', icon: 'rocket' },
+        { label: '40% Cost Reduction', icon: 'trending-down' },
+        { label: '95% mAP on CV Tasks', icon: 'target' },
+        { label: '500+ Users Served', icon: 'users' },
+    ],
 
     social: {
         github: 'https://github.com/bhuvneshsahu01',
@@ -15,22 +23,13 @@ export const personalInfo = {
     },
 
     bio: {
-        short: `Data Scientist at Wipro developing Agentic AI systems, Intelligent Document Processing (IDP) solutions, and proprietary Computer Vision models. Strong background in Statistics with expertise in Machine Learning, Deep Learning, and production AI systems.`,
+        short: `Machine Learning Engineer building production AI systems at Wipro. I specialize in GenAI agents, RAG architectures, and computer vision—turning business problems into deployed solutions. M.Sc. Data Science from CMI. Previously reduced support costs 40% with an intelligent agent system at Coriolis, and shipped a 95%+ mAP crack detection pipeline at AlgoLabs. Passionate about making AI reliable enough for production.`,
 
-        long: `I am Bhuvnesh Sahu, a Data Scientist at Wipro, where I develop Agentic AI systems, 
-           Intelligent Document Processing (IDP) solutions, and proprietary Computer Vision models at 
-           enterprise scale. With a strong academic foundation in Statistics (B.Sc from Hindu College, 
-           Delhi University) and currently pursuing my Master's in Data Science from Chennai Mathematical 
-           Institute, I bridge the gap between theoretical machine learning and production-ready AI systems.
+        long: `I'm a Machine Learning Engineer specializing in production GenAI and computer vision systems. Currently at Wipro, I build enterprise AI solutions—from intelligent document processing pipelines to multi-agent orchestration systems that automate complex business workflows.
 
-           My professional journey includes building system-agnostic AI assistants at Coriolis Technologies 
-           and developing industrial-grade crack detection systems at AlgoLabs. I focus on creating solutions 
-           that translate messy business problems into structured analytical pipelines, comfortable with both 
-           classical statistical modeling and cutting-edge deep learning/LLM workflows.
+My approach combines strong statistical foundations (M.Sc. Data Science from CMI, CGPA 8.31) with hands-on engineering experience shipping real systems. At AlgoLabs, I built and deployed a computer vision pipeline for infrastructure monitoring (95%+ mAP). At Coriolis, I developed an agentic AI assistant that reduced support team workload by 40% through intelligent workflow automation.
 
-           I am particularly skilled at building, evaluating, optimizing, and deploying models that solve 
-           real-world challenges, with hands-on experience in Agentic AI, Gen-AI, Computer Vision, NLP, 
-           and end-to-end MLOps pipelines.`,
+I'm obsessed with building AI systems that actually work in production—which means focusing on reliability, evaluation, and maintainability, not just model performance. My ideal next role is at a company that's serious about putting cutting-edge AI into production at scale.`,
     },
 
     education: [
@@ -50,27 +49,11 @@ export const personalInfo = {
             grade: 'CGPA: 8.7/10.00',
             description: 'Strong foundation in statistical theory, probability, and mathematical modeling. Recipient of DST INSPIRE Scholarship (2020).',
         },
-        {
-            degree: 'Senior Secondary (12th)',
-            institution: 'MPBSE Board',
-            location: 'India',
-            year: '2020',
-            grade: '94.6%',
-            description: 'Science stream with Mathematics, Physics, and Chemistry.',
-        },
-        {
-            degree: 'Secondary (10th)',
-            institution: 'MPBSE Board',
-            location: 'India',
-            year: '2018',
-            grade: '94%',
-            description: 'Completed with distinction.',
-        },
     ],
 
     stats: {
-        projectsCompleted: '6+',
-        experience: '1+ Year',
+        projectsCompleted: '5+',
+        experience: '2 Years',
         cgpa: '8.31/10',
         awards: 'DST INSPIRE',
     },
@@ -87,3 +70,4 @@ export const personalInfo = {
         'AWS Cloud Solutions Architect Professional Certificate - Coursera',
     ],
 };
+

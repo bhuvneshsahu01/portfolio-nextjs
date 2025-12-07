@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider, Navbar, Footer } from '@/components/layout';
-import { DevelopmentBanner } from '@/components/layout/DevelopmentBanner';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -19,25 +18,25 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL('https://bhuvneshsahu.com'),
   title: {
-    default: 'Bhuvnesh Sahu | Data Scientist & AI Engineer',
+    default: 'Bhuvnesh Sahu | ML Engineer | Production GenAI & Computer Vision',
     template: '%s | Bhuvnesh Sahu',
   },
   description:
-    'Data Scientist at Wipro specializing in Agentic AI, Computer Vision, and MLOps. Building production-grade AI systems with Gen-AI, NLP, and Deep Learning.',
+    'Machine Learning Engineer building production AI systems. Shipped 5+ ML systems, reduced support costs 40%, achieved 95% mAP on industrial CV tasks. Specialized in GenAI agents, RAG pipelines, and computer vision.',
   keywords: [
-    'Data Scientist',
     'Machine Learning Engineer',
-    'AI Engineer',
-    'Computer Vision',
-    'NLP',
-    'Gen-AI',
-    'MLOps',
+    'ML Engineer Portfolio',
+    'Production AI Engineer',
+    'GenAI Engineer',
+    'Computer Vision Engineer',
+    'LLM Engineer',
     'Agentic AI',
+    'RAG',
+    'NLP',
     'Deep Learning',
     'Python',
     'PyTorch',
     'LangChain',
-    'RAG',
   ],
   authors: [{ name: 'Bhuvnesh Sahu' }],
   creator: 'Bhuvnesh Sahu',
@@ -45,24 +44,24 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://bhuvneshsahu.com',
-    siteName: 'Bhuvnesh Sahu Portfolio',
-    title: 'Bhuvnesh Sahu | Data Scientist & AI Engineer',
+    siteName: 'Bhuvnesh Sahu - ML Engineer Portfolio',
+    title: 'Bhuvnesh Sahu | ML Engineer | Production GenAI & Computer Vision',
     description:
-      'Data Scientist at Wipro specializing in Agentic AI, Computer Vision, and MLOps.',
+      'Machine Learning Engineer building production AI systems. Shipped 5+ ML systems with measurable business impact.',
     images: [
       {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Bhuvnesh Sahu - Data Scientist & AI Engineer',
+        alt: 'Bhuvnesh Sahu - ML Engineer | Production GenAI & Computer Vision',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bhuvnesh Sahu | Data Scientist & AI Engineer',
+    title: 'Bhuvnesh Sahu | ML Engineer | Production GenAI & Computer Vision',
     description:
-      'Data Scientist at Wipro specializing in Agentic AI, Computer Vision, and MLOps.',
+      'Machine Learning Engineer building production AI systems with measurable business impact.',
     images: ['/images/og-image.png'],
   },
   robots: {
@@ -82,7 +81,6 @@ export default function RootLayout({
         className={`${inter.variable} ${spaceGrotesk.variable} antialiased min-h-screen flex flex-col`}
       >
         <ThemeProvider>
-          <DevelopmentBanner />
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />

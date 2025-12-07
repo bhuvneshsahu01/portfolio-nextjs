@@ -112,11 +112,29 @@ export function FeaturedProjects() {
                                 </div>
 
                                 {/* Technologies */}
-                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
                                     {project.technologies.map((tech) => (
                                         <Badge key={tech} variant="default" size="sm">{tech}</Badge>
                                     ))}
                                 </div>
+
+                                {/* View Case Study Link */}
+                                <a
+                                    href={`/projects/${project.slug}`}
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        gap: '6px',
+                                        color: 'var(--accent-primary)',
+                                        fontSize: '15px',
+                                        fontWeight: 600,
+                                        textDecoration: 'none',
+                                        transition: 'all 0.2s ease'
+                                    }}
+                                >
+                                    View Full Case Study
+                                    <ArrowUpRight style={{ width: '16px', height: '16px' }} />
+                                </a>
                             </div>
                         </motion.div>
                     ))}
