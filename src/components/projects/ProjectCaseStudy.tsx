@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowLeft, Github, ExternalLink, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Github, ExternalLink, ChevronRight, Download } from 'lucide-react';
 import Link from 'next/link';
 import type { Project } from '@/data/projects';
 import { projectCategories } from '@/data/projects';
@@ -137,6 +137,30 @@ export function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
                                 Live Demo
                             </a>
                         )}
+                        {/* Download Report */}
+                        {(project.slug === 'real-time-crack-detection' || project.slug === 'api-assistant-system') && (
+                            <a
+                                href={project.slug === 'real-time-crack-detection' ? '/reports/crack-detection-report.pdf' : '/reports/coriolis-report.pdf'}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '8px',
+                                    padding: '12px 24px',
+                                    borderRadius: '12px',
+                                    background: 'var(--background-card)',
+                                    border: '2px solid var(--accent-primary)',
+                                    color: 'var(--accent-primary)',
+                                    textDecoration: 'none',
+                                    fontWeight: 600,
+                                    transition: 'all 0.2s ease'
+                                }}
+                            >
+                                <Download style={{ width: '18px', height: '18px' }} />
+                                Download Full Report
+                            </a>
+                        )}
                     </div>
                 </motion.div>
 
@@ -178,6 +202,102 @@ export function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
                             {project.longDescription}
                         </p>
                     </motion.div>
+
+                    {/* My Role */}
+                    {project.myRole && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.25 }}
+                            style={{
+                                background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05))',
+                                border: '1px solid rgba(99, 102, 241, 0.2)',
+                                borderRadius: '20px',
+                                padding: '24px 32px',
+                            }}
+                        >
+                            <h3 style={{
+                                fontSize: '1rem',
+                                fontWeight: 600,
+                                marginBottom: '8px',
+                                color: 'var(--accent-primary)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.5px'
+                            }}>
+                                My Role
+                            </h3>
+                            <p style={{
+                                fontSize: '1.125rem',
+                                color: 'var(--foreground)',
+                                lineHeight: 1.7,
+                                fontWeight: 500
+                            }}>
+                                {project.myRole}
+                            </p>
+                        </motion.div>
+                    )}
+
+                    {/* Deployment & Operations */}
+                    {project.productionization && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.28 }}
+                            style={{
+                                background: 'var(--background-card)',
+                                border: '1px solid var(--border-color)',
+                                borderRadius: '20px',
+                                padding: '32px',
+                                boxShadow: 'var(--shadow-card)'
+                            }}
+                        >
+                            <h2 style={{
+                                fontSize: '1.5rem',
+                                fontWeight: 600,
+                                marginBottom: '24px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '12px'
+                            }}>
+                                <span style={{ fontSize: '1.5rem' }}>🚀</span>
+                                Deployment & Operations
+                            </h2>
+                            <div style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                                gap: '20px'
+                            }}>
+                                {project.productionization.cicd && (
+                                    <ProductionCard
+                                        title="CI/CD Pipeline"
+                                        icon="🔄"
+                                        content={project.productionization.cicd}
+                                    />
+                                )}
+                                {project.productionization.monitoring && (
+                                    <ProductionCard
+                                        title="Monitoring & Metrics"
+                                        icon="📊"
+                                        content={project.productionization.monitoring}
+                                    />
+                                )}
+                                {project.productionization.rollback && (
+                                    <ProductionCard
+                                        title="Rollback Strategy"
+                                        icon="⏪"
+                                        content={project.productionization.rollback}
+                                    />
+                                )}
+                                {project.productionization.optimization && (
+                                    <ProductionCard
+                                        title="Optimization"
+                                        icon="⚡"
+                                        content={project.productionization.optimization}
+                                    />
+                                )}
+                            </div>
+                        </motion.div>
+                    )}
 
                     {/* Problem Statement */}
                     {project.problem && (
@@ -280,6 +400,87 @@ export function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
                                     </li>
                                 ))}
                             </ul>
+                        </motion.div>
+                    )}
+
+                    {/* Architecture & Visual Proof */}
+                    {(project.slug === 'crack-detection' || project.slug === 'coriolis-ai-assistant') && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.45 }}
+                            style={{
+                                background: 'var(--background-card)',
+                                border: '1px solid var(--border-color)',
+                                borderRadius: '20px',
+                                padding: '32px',
+                                boxShadow: 'var(--shadow-card)'
+                            }}
+                        >
+                            <h2 style={{
+                                fontSize: '1.5rem',
+                                fontWeight: 600,
+                                marginBottom: '20px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '12px'
+                            }}>
+                                <span style={{ fontSize: '1.5rem' }}>📊</span>
+                                Architecture & Visual Proof
+                            </h2>
+                            <p style={{
+                                fontSize: '1rem',
+                                color: 'var(--foreground-secondary)',
+                                marginBottom: '24px',
+                                lineHeight: 1.7
+                            }}>
+                                {project.slug === 'crack-detection'
+                                    ? 'System architecture, performance metrics, and detection results from production deployment.'
+                                    : 'LLM orchestration flow, workflow diagrams, and success metrics from enterprise deployment.'}
+                            </p>
+                            <div style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                                gap: '20px'
+                            }}>
+                                {project.slug === 'crack-detection' ? (
+                                    <>
+                                        <ImageCard
+                                            src="/images/projects/crack-detection/curated/report_page5_img1.png"
+                                            alt="System Architecture Diagram"
+                                            caption="End-to-end pipeline architecture"
+                                        />
+                                        <ImageCard
+                                            src="/images/projects/crack-detection/curated/report_page39_img1.png"
+                                            alt="Performance Results"
+                                            caption="Model performance metrics (95.3% mAP)"
+                                        />
+                                        <ImageCard
+                                            src="/images/projects/crack-detection/curated/report_page41_img2.png"
+                                            alt="Detection Results"
+                                            caption="Real-world crack detection results"
+                                        />
+                                    </>
+                                ) : (
+                                    <>
+                                        <ImageCard
+                                            src="/images/projects/coriolis/curated/presentation_page3_img2.png"
+                                            alt="System Architecture"
+                                            caption="LLM orchestration architecture"
+                                        />
+                                        <ImageCard
+                                            src="/images/projects/coriolis/curated/report_page7_img1.png"
+                                            alt="Workflow Diagram"
+                                            caption="Multi-step API workflow execution"
+                                        />
+                                        <ImageCard
+                                            src="/images/projects/coriolis/curated/slides_page4_img3.jpeg"
+                                            alt="System Flow"
+                                            caption="Agentic AI workflow orchestration"
+                                        />
+                                    </>
+                                )}
+                            </div>
                         </motion.div>
                     )}
 
@@ -511,6 +712,86 @@ export function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
                     </Link>
                 </motion.div>
             </div>
+        </div>
+    );
+}
+
+// Helper component for productionization cards
+function ProductionCard({ title, icon, content }: { title: string; icon: string; content: string }) {
+    return (
+        <div style={{
+            padding: '20px',
+            borderRadius: '12px',
+            background: 'var(--background-secondary)',
+            border: '1px solid var(--border-color)',
+        }}>
+            <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                marginBottom: '12px'
+            }}>
+                <span style={{ fontSize: '1.25rem' }}>{icon}</span>
+                <h4 style={{
+                    fontSize: '1rem',
+                    fontWeight: 600,
+                    color: 'var(--foreground)',
+                    margin: 0
+                }}>
+                    {title}
+                </h4>
+            </div>
+            <p style={{
+                fontSize: '0.95rem',
+                color: 'var(--foreground-secondary)',
+                lineHeight: 1.7,
+                margin: 0
+            }}>
+                {content}
+            </p>
+        </div>
+    );
+}
+
+// Helper component for displaying architecture diagrams and charts
+function ImageCard({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
+    return (
+        <div style={{
+            borderRadius: '12px',
+            overflow: 'hidden',
+            border: '1px solid var(--border-color)',
+            background: 'var(--background)',
+        }}>
+            <div style={{
+                width: '100%',
+                aspectRatio: '4/3',
+                position: 'relative',
+                background: 'var(--background-secondary)'
+            }}>
+                <img
+                    src={src}
+                    alt={alt}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'contain',
+                        padding: '12px'
+                    }}
+                    loading="lazy"
+                />
+            </div>
+            {caption && (
+                <div style={{
+                    padding: '12px 16px',
+                    fontSize: '14px',
+                    color: 'var(--foreground-secondary)',
+                    textAlign: 'center',
+                    borderTop: '1px solid var(--border-color)',
+                    background: 'var(--background-card)'
+                }}>
+                    {caption}
+                </div>
+            )}
         </div>
     );
 }

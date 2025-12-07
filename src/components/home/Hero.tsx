@@ -158,7 +158,7 @@ export function Hero() {
                                     transition: 'all 0.2s ease'
                                 }}
                             >
-                                Explore Projects
+                                View Case Studies
                             </a>
                             <a
                                 href="/resume.pdf"
