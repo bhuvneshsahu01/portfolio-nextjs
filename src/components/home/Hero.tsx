@@ -71,7 +71,7 @@ export function Hero() {
                             transition={{ duration: 0.5, delay: 0.25 }}
                             style={{ fontSize: 'clamp(0.95rem, 1.8vw, 1.25rem)', color: 'var(--accent-primary)', marginBottom: '20px', fontWeight: 500 }}
                         >
-                            Shipping production AI systems that reduce costs and automate workflows — expert in LLM orchestration, RAG, and industrial computer vision.
+                            Building AI systems that deliver measurable outcomes — skilled in LLM orchestration, RAG pipelines, and computer vision.
                         </motion.p>
 
                         {/* Tagline */}
@@ -81,7 +81,7 @@ export function Hero() {
                             transition={{ duration: 0.5, delay: 0.3 }}
                             style={{ fontSize: '1rem', color: 'var(--foreground-secondary)', maxWidth: '800px', margin: '0 auto 24px', lineHeight: 1.7 }}
                         >
-                            I design, build, and deploy end-to-end ML systems (LLM agents, RAG pipelines, CV) that deliver measurable business outcomes — e.g., 40% support-ticket reduction and 95%+ mAP in production deployments.
+                            I build end-to-end ML systems (LLM agents, RAG pipelines, CV) focused on delivering measurable outcomes — including projects that achieved 40% support-ticket reduction and 95%+ mAP in deployment.
                         </motion.p>
 
                         <motion.div

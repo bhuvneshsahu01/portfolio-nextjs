@@ -23,12 +23,12 @@ export const experiences: Experience[] = [
         startDate: '2025-07',
         current: true,
         description:
-            'Building production AI systems for enterprise clients—from multi-agent orchestration to computer vision pipelines.',
+            'Developing AI solutions for enterprise clients, focusing on agentic AI, document processing pipelines, and computer vision applications.',
         responsibilities: [
-            'Designed and owned multi-agent LLM orchestration for enterprise IDP pipelines, reducing human touchpoints in manual document workflows',
-            'Implemented RAG pipelines with production vector DBs and fine-tuned models for domain accuracy; delivered sub-second retrieval latencies for common queries (P99 < 500ms)',
-            'Built containerized ML microservices (FastAPI + Docker) and integrated CI/CD for model deployments, reducing time-to-production from weeks to days',
-            'Collaborated with cross-functional teams to define SLOs, monitoring dashboards, and automated rollback procedures for model failures',
+            'Contributing to multi-agent LLM orchestration systems for enterprise IDP workflows using LangChain and LangGraph',
+            'Building RAG pipelines with ChromaDB for document Q&A systems, implementing prompt optimization and context retrieval strategies',
+            'Developing containerized ML services (FastAPI + Docker) and participating in model deployment and integration workflows',
+            'Collaborating with senior engineers on production ML system design, learning MLOps practices including monitoring and CI/CD patterns',
         ],
         technologies: [
             'Python',
@@ -43,10 +43,10 @@ export const experiences: Experience[] = [
             'MLOps',
         ],
         highlights: [
-            'Owned design and deployment of multi-agent LLM orchestration reducing manual workflow steps by 30-40%',
-            'Delivered P99 < 500ms retrieval latency for production RAG pipelines',
-            'Reduced model deployment time from weeks to days through containerization and CI/CD',
-            'Defined SLOs and monitoring for enterprise ML systems',
+            'Contributing to production agentic AI and IDP systems for enterprise clients',
+            'Developing RAG pipelines with vector databases for intelligent document processing',
+            'Building containerized ML microservices and learning production deployment practices',
+            'Gaining hands-on experience with LangChain, LangGraph, and modern LLM orchestration frameworks',
         ],
     },
     {
